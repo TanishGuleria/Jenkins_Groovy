@@ -16,6 +16,7 @@ def call(body)
                         script{
                             sh 'echo "shared lib "'
                             sh '''
+                                chmod +x ./tf.sh
                                 ./tf.sh
                     
                             '''
