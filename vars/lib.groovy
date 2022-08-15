@@ -12,11 +12,15 @@ def call(body)
         stages {
             stage ('build'){
                 steps {
-                    sh 'echo "shared lib "'
-                    sh '''
-                        echo "multi sahred lib"
+                    dir('terraform/'){
+                        script{
+                            sh 'echo "shared lib "'
+                            sh '''
+                                ./tf.sh
                     
-                    '''
+                            '''
+                        }
+                    }
                 }
             }
         }
