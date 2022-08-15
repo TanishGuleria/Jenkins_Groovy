@@ -1,14 +1,6 @@
-pipeline{
-    agent any
-    stages {
-        stage ('build'){
-            steps {
-                sh 'echo "hello world"'
-                sh '''
-                    echo "multi steps shell"
-                    ls
-                '''
-            }
-        }
-    }
+@Library('lib')
+_
+
+lib {
+    
 }
