@@ -7,10 +7,10 @@ def call(body)
     stages {
         stage ('build'){
             steps {
-                sh 'echo "hello world"'
+                sh 'echo "shared lib "'
                 sh '''
-                    echo "multi steps shell"
-                    ls
+                    echo "multi sahred lib"
+                    
                 '''
             }
         }
